@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate//Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/xsd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="app.entities.User" table="users">
+        <id name="id" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="login" column="login" type="string"/>
+        <property name="email" column="email" type="string"/>
+        <property name="password" column="password" type="string"/>
+        <many-to-one name="status" class="app.entities.Status">
+            <column name="status_id" not-null="true"/>
+        </many-to-one>
+        <set name="bookSet" table="users_books">
+            <key column="user_id"></key>
+            <many-to-many column="book_id" class="app.entities.User"></many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

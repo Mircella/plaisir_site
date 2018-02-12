@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate//Hibernate Mappig DTD 3.0//EN"
+"http://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="app.entities.Book" table="books">
+        <id name="id" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="title" column="title" type="string"/>
+        <property name="description" column="description" type="string"/>
+        <property name="year" column="year" type="int"/>
+        <many-to-one name="bookCategory" class="app.entities.BookCategory">
+            <column name="category_id" not-null="true"/>
+        </many-to-one>
+        <set name="userSet" table="users_books">
+            <key column="user_id"></key>
+            <many-to-many column="book_id" class="app.entities.Book"></many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

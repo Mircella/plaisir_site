@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <context-param>
+        <param-name>generalParamFirst</param-name>
+        <param-value>general parameter</param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>addUserServlet</servlet-name>
+        <servlet-class>app.servlets.AddUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addUserServlet</servlet-name>
+        <url-pattern>/add_user</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getUserServlet</servlet-name>
+        <servlet-class>app.servlets.GetUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getUserServlet</servlet-name>
+        <url-pattern>/get_user</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>searchServlet</servlet-name>
+        <servlet-class>app.servlets.SearchServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>searchServlet</servlet-name>
+        <url-pattern>/search_result</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>forumServlet</servlet-name>
+        <servlet-class>app.servlets.ForumServlet</servlet-class>
+
+        <init-param>
+            <param-name>paramFirst</param-name>
+            <param-value>123</param-value>
+        </init-param>
+
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>forumServlet</servlet-name>
+        <url-pattern>/forum</url-pattern>
+    </servlet-mapping>
+
+</web-app>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Plaisir</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum|Rye" rel="stylesheet">
+    <script src="https://use.fontawesome.com/583b2d2cff.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Indie+Flower|Pacifico" rel="stylesheet">
+    <script src="script.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="header">
+        <h1>Plaisir</h1>
+        <h2>Online-book about books</h2>
+
+        <nav class="inner-navigation">
+            <ul>
+                <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i>Main Page</a></li>
+                <li><a href="#me"><i class="fa fa-smile-o" aria-hidden="true"></i>About us</a></li>
+                <li><a href="http://localhost:8080/forum"><i class="fa fa-weixin" aria-hidden="true"></i>Forum</a></li>
+            </ul>
+        </nav>
+        <div class="user_buttons">
+            <button onclick="location.href='/add_user'">Sign up</button>
+            <button onclick="location.href='/get_user'">Sign in</button>
+        </div>
+
+    </div>
+
+    <div class="contentContainer row">
+        <div class="content">
+            <div class="inner-content">
+                <p class="greeting">
+                    Are you looking for the best books of all time? Books, that are must-read? The greatest best-sellers among all the novels? A canon of classics of world literature or, maybe, exciting novels in general? Possibly you are looking for the popular books in 2017? If you're perplexed by similar questions, our recommendations and discussions among our readers at the forum will help you to find preferred one in the heaps of books.<br/>
+                    Therefore, we arrange feedbacks and reviews about books by their genres, so you could easily find something suitable to your interests. And also we made a list based on criteria such as sales, readers' opinions and recommendations of the experts. This means the advantage as you can look through a compact overview on the titles of the most-read, most popular and most recommended books. <br/>
+                    Running through our navigation you will easily grasp everything here. Have a joy!
+                </p>
+                <img src="images/blue_book.jpg" width="50%" id="blue_book">
+                <pre id="object">
+
+      </pre>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="inner-sidebar">
+                <h4>Use site navigation!</h4>
+                <button onclick="location.href='/search_result'" id="search-btn">Search</button>
+                <hr/>
+                <nav class="sidebar-navigation">
+                    <ul>
+                        <li><a href="#"><i class="fa fa-newspaper-o" aria-hidden="true"></i>News</a></li>
+                        <li><a href="views/list.html"><i class="fa fa-book" aria-hidden="true"></i>Rating of the best books</a>
+                        <li><a href="#"><i class="fa fa-bars" aria-hidden="true"></i></i>Categories</a>
+                            <ul>
+                                <li><a href="views/fantasy_category.html">Fantasy</a></li>
+                                <li><a href="views/science_fiction_category.html">Science-fiction</a></li>
+                                <li><a href="views/classic_category.html">Classic</a></li>
+                                <li><a href="views/modern_category.html">Modern</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">1/5</div>
+            <img src="images/slides/harry.jpg" style="width:95%" onclick="location.href='/views/books/game_of_thrones.html'">
+            <div class="text">Harry Potter</div>
+        </div>
+        <div class="mySlides fade invisible">
+            <div class="numbertext">2/5</div>
+            <img src="images/slides/game.jpg" style="width:95%" onclick="location.href='/views/books/game_of_thrones.html'">
+            <div class="text">Game of Thrones</div>
+        </div>
+        <div class="mySlides fade invisible">
+            <div class="numbertext">3/5</div>
+            <img src="images/slides/lotr.jpg" style="width:95%" onclick="location.href='/views/books/lotr.html'">
+            <div class="text">Lord of the Rings</div>
+        </div>
+        <div class="mySlides fade invisible">
+            <div class="numbertext">4/5</div>
+            <img src="images/slides/narnia.jpg" style="width:95%" onclick="location.href='/views/books/chronicles_of_narnia.html'">
+            <div class="text">Chronicles of Narnia</div>
+        </div>
+        <div class="mySlides fade invisible">
+            <div class="numbertext">5/5</div>
+            <img src="images/slides/alice.jpg" style="width:95%" onclick="location.href='/views/books/alice_in_wonderland.html'">
+            <div class="text">Alice in Wonderland</div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094</a>
+        <a class="next" onclick="plusSlides(1)">&#10095</a>
+    </div>
+
+    <br/>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+
+    <div class="footer">
+        <div class="inner-footer">
+            <p><i class="fa fa-copyright" aria-hidden="true"></i> Li E.</p>
+            <a id="me" href="https://vk.com/id386425298">My page in VK</a>
+        </div>
+    </div>
+</div>
+<!--komment-->
+</body>
+</html>
